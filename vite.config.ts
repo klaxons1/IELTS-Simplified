@@ -8,8 +8,9 @@ import { viteSingleFile } from "vite-plugin-singlefile";
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
-// https://vite.dev/config/
+// https://vite.dev
 export default defineConfig({
+  base: "./", // 👈 ОБЯЗАТЕЛЬНО ДОБАВЬТЕ ЭТУ СТРОКУ
   plugins: [react(), tailwindcss(), viteSingleFile()],
   resolve: {
     alias: {
